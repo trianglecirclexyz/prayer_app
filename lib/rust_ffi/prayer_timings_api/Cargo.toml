@@ -1,0 +1,17 @@
+[package]
+name = "prayer_timings_api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "prayer_timings_api"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+# temporary until solar.rs fixed in release
+salah = { path = "./crates/salah" }
+
+flutter_rust_bridge = "*"
+
